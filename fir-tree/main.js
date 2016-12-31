@@ -20,7 +20,7 @@ function firTreeMain() {
   var gift = $('#gift');
   var giftH = gift.height();
   var giftW = gift.width();
-  var baubleSz = 30;
+  var baubleSz = 40;
   var scale = 1;
   
   function onResize() {
@@ -40,6 +40,7 @@ function firTreeMain() {
     gift.width(Math.floor(giftW * scale));
     gift.css('top', (wrapper.height() - gift.height() - 1) + 'px');
     gift.css('left', Math.floor(wrapper.width() / 2 - gift.width() / 2) + 'px');
+    $('.hint').css('font-size', Math.floor(scale * 100) + '%');
   }
   
   function hangBaubles() {
