@@ -49,6 +49,7 @@ function firTreeMain() {
       var top = Math.floor(bbls[i][1] * scale);
       var left = Math.floor(bbls[i][0] * scale);
       bbl.css('top', top + 'px').css('left', left + 'px');
+      bbl.addClass('noselect');
       bbl.attr('data-top', bbls[i][1]).attr('data-left', bbls[i][0]).attr('data-idx', i);
       bbl.css('background', colors[Math.floor(Math.random() * colors.length)]).appendTo(wrapper);
     }
