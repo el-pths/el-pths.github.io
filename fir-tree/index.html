@@ -15,12 +15,36 @@
     .bauble {
       position: absolute;
     }
+    .hint {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-family: sans-serif;
+    }
+    #gift {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      visibility: hidden;
+    }
+    #cnt {
+      font-weight: bold;
+      color: #33f;
+    }
+    body {
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="img-wrap">
       <img id="tree" src="./tree.jpg" alt="Christmass tree with toggling lights"/>
+      <div class="hint">
+        <span>Lit more<br/>Baubles:</span>
+        <span id="cnt"></span>
+      </div>
+      <img id="gift" src="./gift.png"/>
     </div>
   </div>
   <script src="./main.js"></script>
