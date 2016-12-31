@@ -1,4 +1,12 @@
-$(function() {
+$(window).load(function() {
+  try {
+    firTreeMain();
+  } catch (e) {
+    alert(e.message + '\n\n' + e.stack);
+  }
+});
+
+function firTreeMain() {
   var bbls = [[250, 160], [320, 120], [220, 230], [305, 215], [370, 245], [200, 300], [285, 300], [375, 330],
     [170, 370], [255, 375], [335, 385], [420, 380], [100, 450], [190, 470], [290, 480], [380, 475], [475, 450]];
   var colors = ['#f33', '#fd0', '#4bf', '#2f5'];
@@ -38,5 +46,4 @@ $(function() {
   hangBaubles();
   onResize();
   $(window).resize(onResize);
-});
-
+}
